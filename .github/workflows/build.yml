@@ -38,6 +38,7 @@ jobs:
         make -j 2
         make install
         initdb -D ${PGDATA} --locale=C --encoding=UTF8
+        echo "shared_preload_libraries = 'non_truncate'" >> ${PGDATA}/postgresql.conf
         pg_ctl -D ${PGDATA} -w start
     - name: before_script
       run: |
