@@ -10,7 +10,7 @@ jobs:
     name: regression test
     runs-on: ubuntu-latest
     strategy:
-      fail-fast: true
+      fail-fast: false
       matrix:
         pgbranch:
           - master
