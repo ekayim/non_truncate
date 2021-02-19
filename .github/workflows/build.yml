@@ -39,12 +39,14 @@ jobs:
         make install
         initdb -D ${PGDATA} --locale=C --encoding=UTF8
         echo "shared_preload_libraries = 'non_truncate'" >> ${PGDATA}/postgresql.conf
-        pg_ctl -D ${PGDATA} -w start
-    - name: before_script
+    - name: install_extension
       run: |
         cd ${GITHUB_WORKSPACE}
         make USE_PGXS=1 PG_CONFIG=${PGHOME}/bin/pg_config
         make USE_PGXS=1 PG_CONFIG=${PGHOME}/bin/pg_config install
+    - name: start_PostgreSQL
+      run: |
+        pg_ctl -D ${PGDATA} -w start
     - name: script
       run: |
         make USE_PGXS=1 PG_CONFIG=${PGHOME}/bin/pg_config installcheck
