@@ -15,6 +15,7 @@ jobs:
         pgbranch:
           - master
           - REL_13_STABLE
+          - REL_12_STABLE
     env:
       PGBRANCH: ${{ matrix.pgbranch }}
     steps:
