@@ -15,13 +15,13 @@ You should 1) install this extension on your PostgreSQL and 1) enable this exten
 1. Installing
 You can install this extension with the following command in this repository's top-level directory.
 ```sh
-make
-make install
+$ make
+$ make install
 ```
 
 2. Enabling
 You can enable this extension with the following statement:
 ```sql
-CREATE EXTENSION non_truncate;
+=# CREATE EXTENSION non_truncate;
 ```
 NOTE: This extension must be preloaded. Make sure that this extension is included in shared_preload_libraries in postgresql.conf.
