@@ -1,4 +1,4 @@
 comment = 'Ban TRUNCTE statement'
-default_version = '0.0.1'
+default_version = '1.0'
 relocatable = true
 module_pathname = '$libdir/non_truncate'
