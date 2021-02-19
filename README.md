@@ -1,7 +1,7 @@
-# non_truncate Extension
+# non_truncate (PostgreSQL extension)
 
 ## What's this extension?
-This extension disables the TRUNCATE statement by detecting the statement and raising ERROR.\\
+This extension disables the TRUNCATE statement by detecting the statement and raising ERROR.<br>
 The error code is `ERRCODE_INVALID_SQL_StATEMENt_NAME`.
 
 ```sql
@@ -10,7 +10,7 @@ ERROR:  non_truncate extension is banning TRUNCATE statement.
 ```
 
 ## Usage
-You should 1) install this extension on your PostgreSQL and 1) enable this extension.\\
+You should 1) install this extension on your PostgreSQL and 1) enable this extension.<br>
 
 1. Installing
 You can install this extension with the following command in this repository's top-level directory.
